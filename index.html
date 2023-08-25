@@ -12,23 +12,25 @@
 </head>
 
 <body>
-  <div id="calculator" style="width: 25%; height: 400px;"></div>
   <div class="input">
-    <label for="equation_1">Equation 1:</label>
-    <input id="equation_1" name="equation_1" placeholder="Ex. y = 6x − 11" class="button2">
-    <label for="equation_2">Equation 2:</label>
-    <input id="equation_2" name="equation_2" placeholder="Ex. −2x − 3y = −7" class="button2">
-    <div class="solve">
-      <button onclick="solve()" class="button1">Solve</button>
-      <button class="button1">
-        <label for="rounding">Round</label>
-        <input type="checkbox" id="rounding" name="rounding" checked="true">
-      </button>
+    <div id="calculator"></div>
+    <div class="label_container">
+      <label>First Equation</label>
+      <label>Second Equation</label>
     </div>
+    <input id="equation_1" name="equation_1" placeholder="Ex. y = 6x − 11">
+    <input id="equation_2" name="equation_2" placeholder="Ex. −2x − 3y = −7">
   </div>
-  <div style="margin-top: 20%;">
+  <div class="solve">
+    <button onclick="solve()" class="button1">Solve</button>
+    <button class="button1">
+      <label for="rounding">Round</label>
+      <input type="checkbox" id="rounding" name="rounding" checked="true">
+    </button>
+  </div>
+  <div style="margin-top: 5%; display: flex; align-items: center;">
     <label for="result">Result:</label>
-    <p id="result" name="result">(0, 0)</p>
+    <p id="result" name="result" style="margin: 0; margin-left: 10px; font-family: 'Nerd';">(0, 0)</p>
   </div>
   <script src="script.js"></script>
 </body>

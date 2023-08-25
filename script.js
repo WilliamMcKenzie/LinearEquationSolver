@@ -32,6 +32,10 @@ function solve() {
         x = Math.round(x * 10) / 10;
         y = Math.round(y * 10) / 10;
     }
+    else {
+        x = Math.round(x * 1000) / 1000;
+        y = Math.round(y * 1000) / 1000;
+    }
 
     document.getElementById("result").innerHTML = `(${x}, ${y})`
 }

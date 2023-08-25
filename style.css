@@ -17,15 +17,49 @@ body {
     align-items: center;
 }
 
-@media (max-width: 600px) {
-    .input {
-        flex-direction: column;
-    }
+.input {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #ffffff;
+    border: 0.5px solid var(--bg-color-alt);
 }
 
-.input {
-    display: flex;
-    align-items: stretch;
+.label_container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    box-shadow: 0px 10px 10px -10px #b7b7b7;
+    z-index: 2;
+}
+
+.input label {
+    display: inline-grid;
+    font-weight: 600;
+    padding: 2.5%;
+    border: 0.5px solid var(--bg-color-alt);
+    font-size: 20px;
+}
+
+.input input {
+    font-weight: 600;
+    padding: 2.5%;
+    background-color: #ffffff;
+    border: 0.5px solid #d9d9d9;
+    font-family: 'Nerd';
+    color: var(--bg-color-light);
+    font-weight: 600;
+}
+
+.input input:focus {
+    outline: none;
+}
+
+#calculator {
+    width: 600px;
+    height: 400px;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .hidden {
@@ -55,15 +89,21 @@ body {
     flex-direction: column;
 }
 
+.solve {
+    display: flex;
+    align-items: center;
+}
+
 .button1 {
-    border-radius: 5%;
-    border-color: var(--bg-color-alt);
-    border-style: solid;
+    border: 2px solid var(--bg-color-alt);
+    height: 2rem;
+    max-height: 1.8rem;
+    margin: 5px;
 
     background-color: var(--bg-color);
     color: var(--bg-color-light);
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .button1:hover {
@@ -73,14 +113,9 @@ body {
 
 .button2 {
     border-radius: 5%;
-    border-bottom-right-radius: 10px;
-    border-color: var(--bg-color);
-    border-style: solid;
+    border: 2px solid var(--bg-color-alt);
 
-    background-color: var(--bg-color-alt);
     padding-left: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     color: var(--bg-color-light);
     font-weight: bold;
     font-size: 15px;
@@ -102,12 +137,6 @@ body {
     font-weight: bold;
 }
 
-.calculator {
-    background-color: var(--bg-color);
-    padding: 30px;
-    border-radius: 5%;
-}
-
 #screen {
     background-color: var(--bg-color-alt);
     border-radius: 2.5%;
@@ -123,4 +152,18 @@ body {
     padding-right: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@font-face {
+    font-family: 'Nerd';
+    src: url('./JetBrainsMono-Regular.ttf');
+}
+
+@media (max-width: 700px) {
+    #calculator {
+        width: 400px;
+        height: 300px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
