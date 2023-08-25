@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Linear Equations</title>
+  <link rel="icon" type="image/x-icon" href="icon/linear_equations.jpg">
+  <script src="math.js" type="text/javascript"></script>
+  <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="calculator" style="width: 25%; height: 400px;"></div>
+  <div class="input">
+    <label for="equation_1">Equation 1:</label>
+    <input id="equation_1" name="equation_1" placeholder="Ex. y = 6x − 11" class="button2">
+    <label for="equation_2">Equation 2:</label>
+    <input id="equation_2" name="equation_2" placeholder="Ex. −2x − 3y = −7" class="button2">
+    <div class="solve">
+      <button onclick="solve()" class="button1">Solve</button>
+      <button class="button1">
+        <label for="rounding">Round</label>
+        <input type="checkbox" id="rounding" name="rounding" checked="true">
+      </button>
+    </div>
+  </div>
+  <div style="margin-top: 20%;">
+    <label for="result">Result:</label>
+    <p id="result" name="result">(0, 0)</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
