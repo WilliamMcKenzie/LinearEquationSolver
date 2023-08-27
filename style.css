@@ -4,7 +4,7 @@ body {
     --bg-color-light: #383838;
     --secondary-color: #88b4b4;
     color: var(--bg-color-light);
-    background-color: var(--bg-color);
+    background-image: url('icon/background.png');
 
     height: 100%;
     font-size: 25px;
@@ -96,14 +96,15 @@ body {
 
 .button1 {
     border: 2px solid var(--bg-color-alt);
-    height: 2rem;
-    max-height: 1.8rem;
+    height: 40px;
+    max-height: 38px;
     margin: 5px;
 
     background-color: var(--bg-color);
     color: var(--bg-color-light);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 20px;
+    text-align: center;
 }
 
 .button1:hover {
