@@ -56,8 +56,8 @@ body {
 }
 
 #calculator {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 500px;
     grid-column-start: 1;
     grid-column-end: 3;
 }
