@@ -5,7 +5,6 @@ restrictedFunctions = true;
 
 
 
-
 function solve() {
 
     var e1 = document.getElementById("equation_1").value
@@ -38,6 +37,7 @@ function solve() {
     }
 
     document.getElementById("result").innerHTML = `(${x}, ${y})`
+    if (x !== 0 && y !== 0) confetti();
 }
 
 function getX(e1, e2) {

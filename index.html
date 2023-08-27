@@ -22,7 +22,7 @@
     <input id="equation_2" name="equation_2" placeholder="Ex. −2x − 3y = −7">
   </div>
   <div class="solve">
-    <button onclick="solve()" class="button1">Solve</button>
+    <button onclick="solve()" class="button1" id="solve">Solve</button>
     <button class="button1">
       <label for="rounding">Round</label>
       <input type="checkbox" id="rounding" name="rounding" checked="true">
@@ -32,6 +32,7 @@
     <label for="result">Result:</label>
     <p id="result" name="result" style="margin: 0; margin-left: 10px; font-family: 'Nerd';">(0, 0)</p>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 
